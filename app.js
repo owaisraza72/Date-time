@@ -4,19 +4,18 @@ document.write(
   `Date: ${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
 );
 
-function time() {
+// function time() {
   date = new Date();
-  let hour = date.getHours().toString().padStart(2, "0");
+  console.log(date)  
+  let hours = date.getHours().toString().padStart(2, "0");
   let min = date.getMinutes().toString().padStart(2, "0");
   let sec = date.getSeconds().toString().padStart(2, "0");
 
-  let total = `Time: ${hour}:${min}:${sec}`;
+  let total = `Time: ${hours}:${min}:${sec}`;
 
   let clock = document.getElementById("clock");
   clock.innerText = total;
-}
-
-setInterval(time, 1000);
+// setInterval(time, 1000);
 
 // weekend checker
 let n = new Date();
@@ -32,7 +31,7 @@ if (userDay === "Sun" || userDay === "Sat") {
 }
 
 //past days aj tak kitna  hwai
-function day(dates) {
+function day(dates) { 
   let now = new Date(dates);
   let date = new Date();
   let diffDate = date - now;
